@@ -1,0 +1,22 @@
+<header class="top-line">
+  <div class="adress-line">
+    <h5>ЭВОТОР ЦЕНТР г. Новотроицк</h5>
+    <h5>+7 (961) 901-50-01 centerevotor@gmail.com</h5>
+  </div>
+  <a href="{{ site.baseurl}}" class="logo">EVOTOR CENTER</a>
+  <div class="search-wrap">
+    <div class="search" title="Поиск по сайту..."><div class="fa fa-search"></div></div>
+    <div class="search-field">
+      <form action="/search.html" id="cse-search-box">
+        <input type="hidden" name="cx" value="partner-pub-xxx:xxx" />
+        <input type="hidden" name="cof" value="FORID:10" />
+        <input type="hidden" name="ie" value="UTF-8" />
+        <input type="text" name="q" placeholder="Поиск по сайту..." />
+      </form>
+    </div>
+  </div>
+  <div class="mobile-menu-button"><i class="fa fa-bars"></i> МЕНЮ</div>
+  <nav class="main-menu top-menu">
+{% include /main-menu.html %}
+  </nav>
+</header>

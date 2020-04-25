@@ -1,0 +1,72 @@
+{% include /header-page.html %}
+{% include /top-line.html %}
+  
+  <header class="page-header overlay" style="background-image: url({{ page.image }})">
+        <div class="page-header-content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-7 col-md-8">
+                <div class="page-header-meta">
+                  <a href="{{ site.category_dir }}/{{ page.categories}}" class="page-category-link">{{ page.catname}}</a>
+                  <span class="date">{{ page.date | date: '%d'}}/{{ page.date | date: '%m'}}/{{ page.date | date: '%Y'}}</span>
+                  <h1>{{ page.title}}</h1>
+                  <div class="item-social">
+                    <div class="item-comments" title="Количество комментариев">
+                      <i class="fa fa-comment"></i><a href="{{ page.url }}#disqus_thread" class="item-comments-count"></a>
+                    </div>
+                    <div class="fa fa-share-alt" title="Поделиться в социальных сетях"></div>
+                      <div class="likely likely-custom" data-url="{{ site.url }}{{ page.url }}" data-media="{{ site.url }}/{{ page.image }}" data-title="{{ page.title }}">
+                        <div class="vkontakte" title="Поделиться Вконтакте">Вконтакте</div>
+                        <div class="odnoklassniki" title="Поделиться в Одноклассниках">Одноклассники</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </header>
+  <div class="article-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <article class="main-article">
+            <nav class="breadcrumbs">
+              <ul>
+                <li><a href="{{ site.baseurl }}">Главная</a></li>
+                <li><a href="{{ site.category_dir }}/{{ page.categories }}">{{ page.catname }}</a></li>
+                <li class="active">{{ page.title }}</li>
+              </ul>
+            </nav>
+
+            <div class="article-body">
+              <div class="ad top-ad">
+{% include /ad-type-1.html %}
+              </div>
+{{ content }}
+
+
+            </div>
+            <div class="likely-on-page">
+              <div class="likely" data-url="{{ site.url }}{{ page.url }}" data-media="{{ page.image }}" data-title="{{ page.title }}">
+                <div class="vkontakte" title="Поделиться Вконтакте">Вконтакте</div>
+                <div class="odnoklassniki" title="Поделиться в Одноклассниках">Одноклассники</div>
+            </div>
+            </div>
+            
+            <div class="comments">
+
+{% include /comments.html %}
+              
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+{% include /category-aside.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% include /footer.html %}

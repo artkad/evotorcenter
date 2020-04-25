@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /index.html
+Host: evotorcenter.ru
+Sitemap: http://evotorcenter.ru/sitemap.xml

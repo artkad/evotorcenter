@@ -1,0 +1,44 @@
+{% include /header-category.html %}
+{% include /top-line.html %}
+  
+  <div class="pattern pattern-cat-header">
+    <div class="cat-header overlay" style="background-image: url({{ page.image }})">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="cat-header-block">
+              <h1>{{ page.title }}</h1>
+              <p>{{ page.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cat-list">
+    <div class="container-fluid">
+      <div class="ad top-ad">
+{% include /ad-type-1.html %}
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+        <div class="cat-list-wrap">
+
+{% for post in paginator.posts offset: 0 %}
+{% include /category-list-item.html %}
+{% endfor %}
+<!-- {% for post in site.categories.service offset: 0 %}
+{% include /category-list-item.html %}
+{% endfor %} -->
+
+        </div>
+        </div>
+        <div class="col-md-4">
+          {% include /category-aside.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% include /footer.html %}  
